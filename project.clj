@@ -16,7 +16,8 @@
                  [bouncer "0.3.1-beta1"]
                  [datomic-schematode "0.1.0-RC3"]
                  [com.datomic/datomic-free "0.9.4707" :exclusions [commons-codec]]
-                 [liberator "0.10.0" :exclusions [hiccup]]]
+                 [liberator "0.10.0" :exclusions [hiccup]]
+                 [prismatic/schema "0.2.2"]]
 
   :resource-paths ["resources"]
   :pedantic? :warn ; :abort
