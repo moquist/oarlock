@@ -26,7 +26,7 @@
     :dbfns [(constraints/unique :perf-asmt :id-sk :id-sk-origin)]}
    {:namespace :section
     :attrs [[:id-sk :string]
-            [:instructor :ref]
+            [:instructors :ref :many]
             [:perf-asmts :ref :many]
             [:status :enum [:active :archived :preactive]]]}
    {:namespace :user2perf-asmt ;; TODO: rename to student2perf-asmt
