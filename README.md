@@ -2,6 +2,11 @@
 
 Oarlock is part of VLACS' Galleon and owns work (performance assessments, tasks, sections, enrollments, etc)
 
+## Running Tests
+You can build the necessary dependencies and run the tests with one command.
+
+```$ sh test.sh```
+
 ## TODO
 - Add section and section2user schema & fns
 - Validation
