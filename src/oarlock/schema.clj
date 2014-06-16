@@ -29,17 +29,17 @@
             [:instructor :ref]
             [:perf-asmts :ref :many]
             [:status :enum [:active :archived :preactive]]]}
-   {:namespace :user2perf-asmt
+   {:namespace :user2perf-asmt ;; TODO: rename to student2perf-asmt
     :attrs [[:user :ref]
             [:perf-asmt :ref]
             [:grade :boolean]]}
-   {:namespace :user2task
+   {:namespace :student2task
     :attrs [[:user :ref]
             [:task :ref]
             [:progress :boolean]]}
-   {:namespace :user2section
+   {:namespace :student2section
     :attrs [[:user :ref]
             [:section :ref]
-            ;; TODO: do we want to use our current model of status, or do something different?
+            [:events :ref :many] ;; examples: welcome-email-sent, welcome-call-done, follow-up-call-done, etc.
             [:status :enum [:active :completed :withdrawn-failing :withdrawn-no-grade]]
-            [:activation-status :enum [:assigned :assigned-emailed :enabled :contact-instructor]]]}])
+            [:access :enum [:assigned :enabled :contact-instructor]]]}])
