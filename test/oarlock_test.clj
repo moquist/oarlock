@@ -2,10 +2,28 @@
   (:require [clojure.test :refer :all]
             [datomic.api :as d]
             [oarlock.test-config :as ot-config]
-            [oarlock.testslib :as n-tl]
+            [oarlock.testslib :as o-tl]
             [datomic-schematode :as dst]))
 
 (use-fixtures :once ot-config/testing-fixture)
+
+(deftest create-entities
+  (let [perf-asmt {:perf-asmt/id-sk "1"
+                   :perf-asmt/id-sk-origin :moodle
+                   :perf-asmt/id-sk-with-origin "1-moodle"      ;; TODO: hatch will put together id-sk-with-origin in the future
+                   :perf-asmt/name "Some Pod"
+                   :perf-asmt/version "2014062000"
+                   :perf-asmt/type "asmt-pod"}
+        task {:task/id-sk "1"
+              :task/id-sk-origin :moodle
+              :task/id-sk-with-origin "1-moodle"
+              :task/name "Some Pod Assessment"
+              :task/version "2014062300"}]
+    (testing "create perf-asmt"
+      (is (o-tl/ensure-tx (oarlock/tx-entity! (:db-conn ot-config/system) :perf-asmt perf-asmt))))
+    (testing "create task"
+      (is (o-tl/ensure-tx (oarlock/tx-entity! (:db-conn ot-config/system) :task task))))
+    ))
 
 ;; TODO: write some tests!
 (comment
