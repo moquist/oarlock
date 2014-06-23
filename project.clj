@@ -9,12 +9,13 @@
                  ^{:voom {:repo "https://github.com/vlacs/hatch"}}
                  [org.vlacs/hatch "0.2.1-20140616_203139-gc071772"]
                  ^{:voom {:repo "https://github.com/vlacs/helmsman"}}
-                 [org.vlacs/helmsman "0.2.6-20140616_203454-gb0d69c0"]
+                 [org.vlacs/helmsman "0.2.6-20140619_005947-gb4bb7d4"]
                  ^{:voom {:repo "https://github.com/vlacs/timber"}}
                  [org.vlacs/timber "0.1.7-20140603_205620-gd255b55"]
 
                  [bouncer "0.3.1-beta1"]
-                 [datomic-schematode "0.1.0-RC3"]
+                 ^{:voom {:repo "https://github.com/vlacs/datomic-schematode" :branch "master"}}
+                 [datomic-schematode "0.1.3-RC1-20140623_200337-g168815f"]
                  [com.datomic/datomic-free "0.9.4707" :exclusions [commons-codec]]
                  [liberator "0.10.0" :exclusions [hiccup]]
                  [prismatic/schema "0.2.2"]]
