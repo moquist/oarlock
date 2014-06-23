@@ -20,5 +20,5 @@
 (defn perf-asmt-in [db-conn perf-asmt]
   (tx-entity! db-conn :perf-asmt perf-asmt))
 
-(defn user2perf-asmt-in [db-conn user2perf-asmt]
-  (tx-entity! db-conn :user2perf-asmt user2perf-asmt))
+(defn student2perf-asmt-in [db-conn user2perf-asmt]
+  (tx-entity! db-conn :student2perf-asmt user2perf-asmt))
