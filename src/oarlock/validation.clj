@@ -16,9 +16,11 @@
                :comps                    [s/Str]
                :credit-value-numerator   s/Int
                :credit-value-denominator s/Int}
-   :student2perf-asmt {:user  s/Str
-                       :task  s/Str
-                       :grade s/Bool}})
+   :student2perf-asmt {:id-sk           s/Str
+                       :id-sk-origin    s/Str
+                       :user            s/Str
+                       :task            s/Str
+                       :grade           s/Bool}})
 
 (defn validator
   [entity-type data]
