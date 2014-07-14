@@ -9,10 +9,10 @@
             [:name :string]
             [:version :string] ; not null
             [:type :string] ; not null
-            [:duration-rating-days :bigint]
+            [:duration-rating-days :long]
             [:comps :ref :many]
-            [:credit-value-numerator :bigint]
-            [:credit-value-denominator :bigint]]
+            [:credit-value-numerator :long]
+            [:credit-value-denominator :long]]
     :dbfns [(constraints/unique :perf-asmt :name :version :type)
             (constraints/unique :perf-asmt :id-sk :id-sk-origin)]}
    {:namespace :task
