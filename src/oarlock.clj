@@ -18,7 +18,7 @@
   (tx-entity! db-conn :task task))
 
 (defn perf-asmt-in [db-conn perf-asmt]
-  (tx-entity! db-conn :perf-asmt perf-asmt))
+  (tx-entity! db-conn :perf-asmt (hatch/slam-all perf-asmt :user)))
 
 (defn student2perf-asmt-in [db-conn user2perf-asmt]
   (tx-entity! db-conn :student2perf-asmt user2perf-asmt))
