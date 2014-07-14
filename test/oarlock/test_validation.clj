@@ -8,7 +8,7 @@
 
 (deftest perf-asmt-validation-test
   (testing "perf-asmt validation"
-    (is (= (validator :perf-asmt {}) "Value does not match schema: {:version missing-required-key, :comps missing-required-key, :credit-value-numerator missing-required-key, :id-sk missing-required-key, :type missing-required-key, :duration-rating-days missing-required-key, :credit-value-denominator missing-required-key, :id-sk-origin missing-required-key}"))))
+    (is (= (validator :perf-asmt {}) "Value does not match schema: {:version missing-required-key, :comps missing-required-key, :credit-value-numerator missing-required-key, :id-sk missing-required-key, :type missing-required-key, :duration-rating-days missing-required-key, :credit-value-denominator missing-required-key, :tags missing-required-key, :id-sk-origin missing-required-key}"))))
 
 (deftest student2perf-asmt-validation-test
   (testing "student2perf-asmt validation"

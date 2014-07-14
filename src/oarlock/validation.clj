@@ -11,11 +11,12 @@
                :id-sk-origin             s/Keyword
                (s/optional-key :name)    s/Str
                :version                  s/Str
-               :type                     s/Keyword
+               :type                     s/Str
                :duration-rating-days     s/Int
-               :comps                    [s/Str]
+               :comps                    (s/either [s/Str] [])
                :credit-value-numerator   s/Int
-               :credit-value-denominator s/Int}
+               :credit-value-denominator s/Int
+               :tags                     (s/either [s/Str] [])}
    :student2perf-asmt {:id-sk           s/Str
                        :id-sk-origin    s/Keyword
                        :user            s/Str
