@@ -17,6 +17,11 @@
                :credit-value-numerator   s/Int
                :credit-value-denominator s/Int
                :tags                     (s/either [s/Str] [])}
+   :section {:id-sk         s/Str
+             :id-sk-origin  s/Keyword
+             :instructors   (s/either [s/Str] [])
+             :perf-asmts    (s/either [s/Str] [])
+             :status        s/Str}
    :student2perf-asmt {:id-sk           s/Str
                        :id-sk-origin    s/Keyword
                        :user            s/Str
