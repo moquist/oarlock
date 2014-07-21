@@ -62,7 +62,7 @@
 
 (defn section-in [db-conn section]
   (tx-entity! db-conn :section (-> section
-                                   (update-in [:status] #(slam :section.status (keyword %)))
+                                   (update-in [:status] #(hatch/slam :section.status (keyword %)))
                                    (update-in [:lms] keyword)
                                    (hatch/attr-as-lookup-refs :instructors :user/id-sk)
                                    (hatch/attr-as-lookup-refs :perf-asmts :perf-asmt/id-sk-with-origin)
