@@ -25,7 +25,7 @@
             [:comps :ref :many]]
     :dbfns [(constraints/unique :perf-asmt :id-sk :id-sk-origin)]}
    {:namespace :section
-    :attrs [[:id-sk :string]
+    :attrs [[:id-sk :string :db.unique/identity]
             [:name :string]
             [:instructors :ref :many]
             [:perf-asmts :ref :many]
