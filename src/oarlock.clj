@@ -31,7 +31,6 @@
    :section
    [:section/id-sk
     :section/id-sk-origin
-    [:section/id-sk-with-origin :section/id-sk :section/id-sk-origin]
     :section/instructors
     :section/perf-asmts
     :section/status]
@@ -55,12 +54,16 @@
 (defn task-in [db-conn task]
   (tx-entity! db-conn :task task))
 
-;; TODO: handle comps
 (defn perf-asmt-in [db-conn perf-asmt]
-  (tx-entity! db-conn :perf-asmt (hatch/slam-all (dissoc perf-asmt :comps) :perf-asmt)))
+  (tx-entity! db-conn :perf-asmt (-> perf-asmt
+                                     (hatch/attr-as-lookup-refs :comps :comp/id-sk)
+                                     (hatch/slam-all :perf-asmt))))
 
 (defn section-in [db-conn section]
-  (tx-entity! db-conn :section (hatch/slam-all section :section)))
+  (tx-entity! db-conn :section (-> section
+                                   (hatch/attr-as-lookup-refs :instructors :user/id-sk)
+                                   (hatch/attr-as-lookup-refs :perf-asmts :perf-asmt/id-sk-with-origin)
+                                   (hatch/slam-all :section))))
 
 (defn student2perf-asmt-in [db-conn user2perf-asmt]
   (tx-entity! db-conn :student2perf-asmt user2perf-asmt))

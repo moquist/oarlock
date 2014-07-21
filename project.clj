@@ -7,7 +7,7 @@
                  [org.clojure/tools.cli "0.2.4"]
 
                  ^{:voom {:repo "https://github.com/vlacs/hatch" :branch "dev"}}
-                 [org.vlacs/hatch "0.2.2-20140717_180737-gf6607cd"]
+                 [org.vlacs/hatch "0.2.3-20140721_152704-g587007c"]
                  ^{:voom {:repo "https://github.com/vlacs/helmsman"}}
                  [org.vlacs/helmsman "0.2.6-20140619_005947-gb4bb7d4"]
                  ^{:voom {:repo "https://github.com/vlacs/timber"}}
