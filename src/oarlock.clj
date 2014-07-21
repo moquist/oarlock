@@ -30,9 +30,10 @@
     :task/comps]
    :section
    [:section/id-sk
-    :section/id-sk-origin
+    :section/name
     :section/instructors
     :section/perf-asmts
+    :section/lms
     :section/status]
    :student2perf-asmt
    [:student2perf-asmt/user
