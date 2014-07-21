@@ -26,10 +26,10 @@
     :dbfns [(constraints/unique :perf-asmt :id-sk :id-sk-origin)]}
    {:namespace :section
     :attrs [[:id-sk :string]
-            [:id-sk-origin :keyword]
-            [:id-sk-with-origin :string :db.unique/identity]
+            [:name :string]
             [:instructors :ref :many]
             [:perf-asmts :ref :many]
+            [:lms :keyword] ; e.g., :moodle, :show-evidence
             [:status :enum [:active :archived :preactive]]]}
    {:namespace :student2perf-asmt
     :attrs [[:user :ref]
