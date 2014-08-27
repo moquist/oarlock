@@ -1,3 +1,9 @@
+# This project is dead, unfortunately. #
+
+### We're keeping it here as a monument and potential source of inspiration. ###
+
+--
+
 # oarlock
 
 Oarlock is part of VLACS' Galleon and owns work (performance assessments, tasks, sections, enrollments, etc)
